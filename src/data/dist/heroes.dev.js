@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.heroes = void 0;
 var heroes = [{
   id: 1,
   name: 'Batman',
@@ -21,3 +25,4 @@ var heroes = [{
   name: 'Wolverine',
   owner: 'Marvel'
 }];
+exports.heroes = heroes;
