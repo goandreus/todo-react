@@ -1,17 +1,16 @@
 "use strict";
 
-// variables y constantes
-var nombre = 'Andres';
-var apellido = 'Chavez';
-var valorDado = 5;
-valorDado = 4;
-console.log(nombre, apellido, valorDado); //scope
+//template string
+var nombre = 'andres';
+var apellidos = 'Chavez'; //concatenar
 
-if (true) {
-  var _nombre = 'Carlos';
-  console.log(_nombre);
-  var _valorDado = 6;
-  console.log(_valorDado);
+var nombreCompleto = nombre + ' ' + apellidos; //template string
+
+var nombreCompleto1 = "".concat(nombre, " ").concat(apellidos, "\n").concat(1 + 1, "\n");
+console.log(nombreCompleto + nombreCompleto1);
+
+function getSaludo(nombre) {
+  return 'Hola mundo: ' + nombre;
 }
 
-console.log(valorDado);
+console.log("este es un texto: ".concat(getSaludo(nombre)));
