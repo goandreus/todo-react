@@ -1,32 +1,16 @@
-const  getImage = async () => {
-    try{
-        const apiKey = 'sgFZPyNoX9D3WPLvOWSY52uJsdju4xjq'
+const activo = true;
 
-        const resp = await fetch(`http://api.giphy.com/v1/gifs/random?api_key=${apiKey}`);
-        
-        const { data } = await resp.json();
+// let mensaje = '';
 
-        const { url } = data.images.original;
-        const img = document.createElement('img');
-        img.src = url;
-        document.body.append(img);
-    }catch (err){
-        //manejo de errores
-        console.err(err);
-    }
-} 
+// if(activo) {
+//     mensaje = 'activo';
+// }else{
+//     mensaje = 'Inactivo';
+// }
 
-getImage();
+// const mensaje = (activo) ? 'activo' : 'inactivo';
+// const mensaje = (activo) ? 'activo' : null;
 
+const mensaje = !activo && 'activo'
 
-// peticion
-//     .then(resp => resp.json())
-//     .then(({data}) => {
-//         const { url } = data.images.original;
-
-//         const img = document.createElement('img');
-//         img.src = url;
-//         document.body.append(img);
-//         console.log(data.images.original.url)
-//     })
-//     .catch(console.warn);
+console.log(mensaje);
